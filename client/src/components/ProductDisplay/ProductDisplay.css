@@ -1,0 +1,124 @@
+.product-display{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0px 12% 70px;
+}
+.product-display-container{
+    display: flex;
+    height: 70vh;
+}
+.product-display-left{
+    width: 50%;
+    display: flex;
+    gap: 17px;
+}
+.product-display-img-container{
+    display: flex;
+    height: 100%;
+    gap: 17px;
+}
+.product-display-img-list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+.product-display-img-list img{
+    height: 22%;
+}
+.product-display-main-img{
+    height: 100%;
+}
+.product-display-right{
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+}
+.product-display-right h1{
+    color: #3d3d3d;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.product-display-right-stars{
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+    gap: 5px;
+    color: #1c1c1c;
+    font-size: 1.6rem;
+}
+.product-display-right-prices{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+    gap: 4px;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.product-display-right-price-old, .product-display-right-price-old span{
+    font-size: 1.4rem;
+    color: #818181;
+}
+.product-display-right-price-old span{
+    text-decoration: line-through;
+}
+.product-display-right-price-new{
+    color: #ff4141;
+}
+.product-display-description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+.product-display-description h2{
+    font-size: 2rem;
+}
+.product-display-right-size h1{
+    color: #656565;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.product-display-right-sizes{
+    display: flex;
+    margin: 10px 0px;
+    gap: 10px;
+}
+.product-display-right-sizes div{
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 12px 18px;
+    background-color: #fbfbfb;
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.product-display-right button{
+    margin-top: 17px;
+    padding: 10px 40px;
+    width: 220px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: #FF4141;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.product-display-category{
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+.product-display-category span{
+    font-weight: 600;
+}
+.product-display-informations{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
