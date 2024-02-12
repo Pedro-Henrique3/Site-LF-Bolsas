@@ -1,0 +1,45 @@
+.homecategory-banner{
+    display: block;
+    margin: 30px auto;
+    width: 90%;
+}
+.homecategory-indexSort{
+    display: flex;
+    margin: 0px 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+.homecategory-indexSort p{
+    font-size: 1.5rem;
+}
+.homecategory-indexSort p span{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.homecategory-sort{
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid #888;
+}
+.homecategory-products{
+    margin: 20px auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.homecategory-loadmore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    margin-bottom: 150px;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background-color: #ededed;
+    color: #787878;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
