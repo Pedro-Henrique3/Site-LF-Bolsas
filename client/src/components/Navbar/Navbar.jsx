@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 // import { FiMenu } from "react-icons/fi";
 // import { IoCloseOutline } from "react-icons/io5";
 import cart_icon from "../../assets/cart_icon.png";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { HomeContext } from "../../context/HomeContext";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [menu, setMenu] = useState("shop");
+
+  const { getTotalCartItems } = useContext(HomeContext);
 
   const navHandler = () => {
     setNav(!nav);
@@ -26,8 +29,8 @@ const Navbar = () => {
       </ul>
       <div className="nav-login-cart">
         <Link to='/login'><button>Login</button></Link>
-        <Link to='/cart'><img src={cart_icon} alt="Cart icon" /></Link>
-        <div className="nav-cart-count">0</div>
+        <Link to='/carrinho'><img src={cart_icon} alt="Cart icon" /></Link>
+        <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>
     </div>
     // <div className="w-full h-25 bg-[#00af9a] flex justify-between items-center">

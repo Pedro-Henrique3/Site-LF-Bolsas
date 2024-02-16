@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import star_icon from "../../assets/star_icon.png";
 import star_dull_icon from "../../assets/star_dull_icon.png";
 import "./ProductDisplay.css";
+import { HomeContext } from "../../context/HomeContext";
 
 const ProductDisplay = (props) => {
   const { product } = props;
+  const { addToCart } = useContext(HomeContext);
 
   return (
     <div className="product-display">
@@ -54,12 +56,12 @@ const ProductDisplay = (props) => {
               <div>XG</div>
             </div>
           </div>
-          <button>ADICIONAR AO CARRINHO</button>
+          <button onClick={()=>{addToCart(product.id)}}>ADICIONAR AO CARRINHO</button>
         </div>
       </div>
       <div className="product-display-informations">
         <div className="product-display-description">
-          <h2>Descrição:</h2>
+          <h2>Descrição geral:</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
             nemo maxime quibusdam aperiam, quaerat quas sunt aspernatur suscipit
