@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import star_icon from "../../assets/star_icon.png";
 import star_dull_icon from "../../assets/star_dull_icon.png";
 import "./ProductDisplay.css";
@@ -7,6 +7,19 @@ import { HomeContext } from "../../context/HomeContext";
 const ProductDisplay = (props) => {
   const { product } = props;
   const { addToCart } = useContext(HomeContext);
+  const [qtd, setQtd] = useState(1);
+
+  const addQtd = () => {
+    setQtd(qtd + 1);
+  }
+
+  const removeQtd = () => {
+    if(qtd === 1)
+    {
+      return null
+    }
+    setQtd(qtd - 1);
+  }
 
   return (
     <div className="product-display">
@@ -40,23 +53,23 @@ const ProductDisplay = (props) => {
           </div>
           <div className="product-display-right-prices">
             <div className="product-display-right-price-old">
-              De: <span>R${product.old_price}</span>
+              <span>{product.old_price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
             </div>
             <div className="product-display-right-price-new">
-              R${product.new_price}
+              {product.new_price.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}
             </div>
           </div>
-          <div className="product-display-right-size">
-            <h1>Selecione o tamanho</h1>
-            <div className="product-display-right-sizes">
-              <div>P</div>
-              <div>M</div>
-              <div>G</div>
-              <div>GG</div>
-              <div>XG</div>
+          <div className="product-display-right-buy-container">
+            <div className="product-display-right-size">
+              <h1>Selecione a quantidade:</h1>
+              <div className="product-display-right-sizes">
+                <button className='btn-qtd' onClick={removeQtd}>-</button>
+                <p>{qtd}</p>
+                <button className='btn-qtd' onClick={addQtd}>+</button>
+              </div>
             </div>
+            <button className="btn-buy" onClick={()=>{addToCart(product.id)}}>ADICIONAR AO CARRINHO</button>
           </div>
-          <button onClick={()=>{addToCart(product.id)}}>ADICIONAR AO CARRINHO</button>
         </div>
       </div>
       <div className="product-display-informations">

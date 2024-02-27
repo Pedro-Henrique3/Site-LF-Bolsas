@@ -34,7 +34,7 @@
     height: 50px;
     color: white;
     background-color: #ff4141;
-    margin-top: 30px;
+    margin-top: 20px;
     border: none;
     font-size: 2rem;
     font-weight: 500;
@@ -58,4 +58,32 @@
     color: #5c5c5c;
     font-size: 1.5rem;
     font-weight: 500;
+}
+
+@media (max-width: 1280px){
+    .login-signup-container{
+        width: auto;
+        max-width: 500px;
+        max-height: 500px;
+    }
+    .login-signup-container h1{
+        margin: 10px 0px;
+    }
+    .login-signup-fields{
+        margin-top: 20px;
+    }
+    .login-signup-agree{
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 800px){
+    .login-signup-container{
+        padding: 20px 30px;
+    }
+    .login-signup-fields{
+        margin-top: 20px;
+    }
+    .login-signup-fields input{
+
+    }
 }

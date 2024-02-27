@@ -1,6 +1,6 @@
 .ofertas{
     width: 85%;
-    min-height: 60vh;
+    height: 60vh;
     display: flex;
     margin: auto;
     padding: 0 140px;
@@ -20,7 +20,7 @@
 }
 .ofertas-left p{
     color: #171717;
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 600;
 }
 .ofertas-left button{
@@ -30,7 +30,7 @@
     background-color: #ff4141;
     border: none;
     color: white;
-    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 500;
     margin-top: 30px;
     cursor: pointer;
@@ -44,4 +44,91 @@
 }
 .ofertas-right img{
     width: 60%;
+}
+
+@media (max-width: 1280px){
+    .ofertas{
+        width: 75%;
+        padding: 0px 80px;
+    }
+    .ofertas-left h1{
+        font-size: 4rem;
+    }
+    .ofertas-left p{
+        font-size: 1.8rem;
+    }
+    .ofertas-right img{
+        width: 300px;
+    }
+    .ofertas-left button{
+        width: 220px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 1024px){
+    .ofertas{
+        padding: 0px 60px;
+        margin-bottom: 80px;
+        height: 40vh;
+    }
+    .ofertas-left h1{
+        font-size: 3rem;
+    }
+    .ofertas-left p{
+        font-size: 1.6rem;
+    }
+    .ofertas-right img{
+        width: 200px;
+    }
+    .ofertas-left button{
+        width: 160px;
+        height: 40px;
+        font-size: 1.6rem;
+    }
+    .ofertas-right{
+        padding-top: 10px;
+    }
+}
+@media (max-width: 800px){
+    .ofertas{
+        margin-bottom: 60px;
+    }
+    .ofertas-left h1{
+        font-size: 2.2rem;
+    }
+    .ofertas-left p{
+        font-size: 1.3rem;
+    }
+    .ofertas-right img{
+        height: 100%;
+        width: auto;
+    }
+    .ofertas-left button{
+        width: 140px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 500px){
+    .ofertas{
+        height: 25vh;
+        margin-bottom: 50px;
+    }
+    .ofertas-left h1{
+        font-size: 1.4rem;
+    }
+    .ofertas-left p{
+        font-size: 1rem;
+    }
+    .ofertas-right img{
+        height: 100%;
+        width: auto;
+    }
+    .ofertas-left button{
+        width: 120px;
+        height: 25px;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
 }
